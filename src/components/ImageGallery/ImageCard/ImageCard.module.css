@@ -1,0 +1,10 @@
+.cardImg {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.cardInfo {
+  background-color: white;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding-left: 10px;
+}
