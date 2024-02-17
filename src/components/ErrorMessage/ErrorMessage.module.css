@@ -1,0 +1,9 @@
+.error {
+  font-size: 26px;
+  color: orange;
+}
+.errorContainer {
+  display: flex;
+
+  justify-content: center;
+}

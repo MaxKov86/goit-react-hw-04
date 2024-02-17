@@ -8,9 +8,9 @@ const SearchBar = ({ onSubmit }) => {
     const form = e.target;
     const searchValue = form.elements.search.value;
     if (searchValue.trim() === '') {
-      toast('Pleas input some name!', {
-        duration: 2000,
-        style: { border: 'solid 1px black' },
+      toast('Pleas input something!', {
+        duration: 2500,
+        style: { border: 'solid 1px black', backgroundColor: 'orange' },
         position: 'top-left',
       });
       return;
