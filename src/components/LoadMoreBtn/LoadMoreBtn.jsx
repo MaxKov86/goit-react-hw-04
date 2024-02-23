@@ -1,12 +1,9 @@
 import css from './LoadMoreBtn.module.css';
 
-const LoadMoreBtn = () => {
-  const handelClick = e => {
-    console.log(e.target);
-  };
+const LoadMoreBtn = ({ onClick }) => {
   return (
     <div className={css.btnContainer}>
-      <button className={css.loadMoreBtn} onClick={handelClick} type="click">
+      <button className={css.loadMoreBtn} onClick={onClick} type="click">
         Load More
       </button>
     </div>
