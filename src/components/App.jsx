@@ -51,13 +51,7 @@ const App = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        if (searchValue === '') {
-          return;
-        }
-        setLoader(true);
-
         const data = await searchImages(searchValue, page);
-
         setImages(prev => [...prev, ...data]);
       } catch (error) {
         setError(true);
@@ -65,6 +59,10 @@ const App = () => {
         setLoader(false);
       }
     };
+    if (searchValue === '') {
+      return;
+    }
+    setLoader(true);
     fetchImages();
   }, [page, searchValue]);
 
