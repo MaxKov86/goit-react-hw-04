@@ -1,5 +1,5 @@
 import css from './ImageCard.module.css';
-import ReactModal from 'react-modal';
+
 
 const ImageCard = ({ item: { urls, alt_description, user, likes } }) => {
   return (
@@ -16,11 +16,6 @@ const ImageCard = ({ item: { urls, alt_description, user, likes } }) => {
         <p>Likes:{likes}</p>
         <p></p>
       </div>
-      <ReactModal>
-        <img src={urls.regular} />
-        <p>Photo by:{user.name}</p>
-        <p>Likes:{likes}</p>
-      </ReactModal>
     </div>
   );
 };

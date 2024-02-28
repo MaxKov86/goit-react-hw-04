@@ -3,8 +3,8 @@ import { ImSearch } from 'react-icons/im';
 import toast, { Toaster } from 'react-hot-toast';
 
 const notify = () =>
-  toast('Pleas input something!', {
-    duration: 2500,
+  toast('Oops, the search bar cannot be empty, please input something!', {
+    duration: 3000,
     style: { border: 'solid 1px black', backgroundColor: 'orange' },
     position: 'top-left',
   });
