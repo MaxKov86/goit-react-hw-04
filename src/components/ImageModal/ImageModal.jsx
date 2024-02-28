@@ -14,13 +14,13 @@ const modalStyle = {
   },
 };
 
-const ImageModal = ({ isOpen, onCloseModal, items }) => {
+const ImageModal = ({ onCloseModal, items }) => {
   return (
     <>
       {items.map(item => (
         <ReactModal
           key={item.id}
-          isOpen={isOpen}
+          isOpen={true}
           onRequestClose={onCloseModal}
           shouldCloseOnEsc={true}
           style={modalStyle}

@@ -63,11 +63,7 @@ const App = () => {
       {loader && <Loader />}
       {images.length > 0 && <LoadMoreBtn onClick={onClick} />}
 
-      <ImageModal
-        isOpen={showModal}
-        onCloseModal={onCloseModal}
-        items={images}
-      />
+      {showModal && <ImageModal onCloseModal={onCloseModal} items={images} />}
     </>
   );
 };
