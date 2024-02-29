@@ -14,20 +14,17 @@ const modalStyle = {
   },
 };
 
-const ImageModal = ({ onCloseModal, items }) => {
+const ImageModal = ({ onCloseModal, content }) => {
   return (
     <>
-      {items.map(item => (
-        <ReactModal
-          key={item.id}
-          isOpen={true}
-          onRequestClose={onCloseModal}
-          shouldCloseOnEsc={true}
-          style={modalStyle}
-        >
-          <img src={item.urls.regular} width={'100%'} height={'100%'} />
-        </ReactModal>
-      ))}
+      <ReactModal
+        isOpen={true}
+        onRequestClose={onCloseModal}
+        shouldCloseOnEsc={true}
+        style={modalStyle}
+      >
+        <img src={content.urls.regular} width={'100%'} height={'100%'} />
+      </ReactModal>
     </>
   );
 };

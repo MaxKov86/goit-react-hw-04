@@ -8,7 +8,10 @@ const ImageGallery = ({ items, onModalOpen }) => {
         <li
           key={item.id}
           className={css.galleryItem}
-          onClick={() => onModalOpen()}
+          onClick={() => {
+            
+            onModalOpen(item);
+          }}
         >
           <ImageCard item={item} />
         </li>

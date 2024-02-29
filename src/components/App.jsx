@@ -15,6 +15,7 @@ const App = () => {
   const [page, setPage] = useState(1);
   const [searchValue, setSearchValue] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const [modalContent, setModalContent] = useState({});
 
   const onSubmit = query => {
     setImages([]);
@@ -43,8 +44,11 @@ const App = () => {
     setPage(page + 1);
   };
 
-  const onOpenModal = () => {
+  const onOpenModal = content => {
+    setModalContent(content);
     setShowModal(true);
+
+    return;
   };
 
   const onCloseModal = () => {
@@ -63,7 +67,9 @@ const App = () => {
       {loader && <Loader />}
       {images.length > 0 && <LoadMoreBtn onClick={onClick} />}
 
-      {showModal && <ImageModal onCloseModal={onCloseModal} items={images} />}
+      {showModal && (
+        <ImageModal onCloseModal={onCloseModal} content={modalContent} />
+      )}
     </>
   );
 };
