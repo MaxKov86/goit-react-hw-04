@@ -3,7 +3,7 @@ import { ImSearch } from 'react-icons/im';
 import toast, { Toaster } from 'react-hot-toast';
 
 const notify = () =>
-  toast('Oops, the search bar cannot be empty, please input something!', {
+  toast('Search bar cannot be empty❗', {
     duration: 3000,
     style: { border: 'solid 1px black', backgroundColor: 'orange' },
     position: 'top-left',
@@ -21,7 +21,7 @@ const SearchBar = ({ onSubmit }) => {
     }
 
     onSubmit(value);
-    // form.reset();
+    form.reset();
   };
 
   return (
