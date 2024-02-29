@@ -47,8 +47,6 @@ const App = () => {
   const onOpenModal = content => {
     setModalContent(content);
     setShowModal(true);
-
-    return;
   };
 
   const onCloseModal = () => {
