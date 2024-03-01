@@ -64,9 +64,11 @@ const App = () => {
       {images.length > 0 && (
         <ImageGallery items={images} onModalOpen={onOpenModal} />
       )}
+
       {error && <ErrorMessage />}
 
       {loader && <Loader />}
+
       {images.length !== 0 && (
         <LoadMoreBtn onClick={onClick}> Load More </LoadMoreBtn>
       )}
