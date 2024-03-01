@@ -23,7 +23,13 @@ const ImageModal = ({ onCloseModal, content }) => {
         shouldCloseOnEsc={true}
         style={modalStyle}
       >
-        <img className={css.img} src={content.urls.regular} width={'100%'} height={'100%'} />
+        <img
+          className={css.img}
+          src={content.urls.regular}
+          alt={content.alt_description}
+          width={'100%'}
+          height={'100%'}
+        />
       </ReactModal>
     </>
   );

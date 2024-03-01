@@ -16,7 +16,7 @@ const App = () => {
   const [searchValue, setSearchValue] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState({});
-  const [btnLoadMore, setBtnLoadMore] = useState(false);
+  // const [btnLoadMore, setBtnLoadMore] = useState(false);
 
   const onSubmit = query => {
     if (query === searchValue) {
@@ -30,9 +30,9 @@ const App = () => {
     const fetchImages = async () => {
       try {
         const data = await searchImages(searchValue, page);
-        const { results, total_pages } = data;
+        const { results } = data;
+
         setImages(prev => [...prev, ...results]);
-        setBtnLoadMore(total_pages && total_pages !== page);
       } catch (error) {
         setError(true);
       } finally {
@@ -69,7 +69,7 @@ const App = () => {
       {error && <ErrorMessage />}
 
       {loader && <Loader />}
-      {btnLoadMore && <LoadMoreBtn onClick={onClick} />}
+      {images.length !== 0 && <LoadMoreBtn onClick={onClick} />}
 
       {showModal && (
         <ImageModal onCloseModal={onCloseModal} content={modalContent} />
