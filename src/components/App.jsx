@@ -69,7 +69,9 @@ const App = () => {
       {error && <ErrorMessage />}
 
       {loader && <Loader />}
-      {images.length !== 0 && <LoadMoreBtn onClick={onClick} />}
+      {images.length !== 0 && (
+        <LoadMoreBtn onClick={onClick}> Load More </LoadMoreBtn>
+      )}
 
       {showModal && (
         <ImageModal onCloseModal={onCloseModal} content={modalContent} />
